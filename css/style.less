@@ -1,0 +1,276 @@
+@font-face {
+	font-family: 'Bebas'; 
+	src: url(../fonts/Bebas.ttf); 
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Bebas';
+  letter-spacing: 1px;
+  transition: 0.2s;
+}
+a:active, 
+a:hover,  
+a {
+  text-decoration: none;
+  color: #666;
+}
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #f4f4f4;
+  padding: 10px 20px;
+  width: 100%;
+  height: 10vh;
+  .logo {
+    width: 5%;
+    .logoimg {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+    }
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .navig {
+      padding: 5px 10px;
+      margin-right: 5vw;
+      border-radius: 5px;
+      transition: all 0.2s;
+      cursor: pointer;
+      p {
+        color: #3b4db1;
+        font-size: 1.5vw;
+      }
+    }
+    .navig:hover{
+      box-shadow: 0px 0px 5px 2px #a2a1a1;
+    }
+    .active {
+      box-shadow: 0px 0px 5px 2px #a2a1a1;
+      p {
+        color: #3b4db1;
+      }
+    }
+  }
+  .navButton{
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 60%;
+    cursor: pointer;
+    .navLine{
+      width: 90%;
+      background: #3b4db1;
+      height: 3px;
+      border-radius: 1px;
+    }
+  }
+}
+.main {
+  width: 100%;
+  height: 90vh;
+  background: #f4f4f4;
+  background-repeat: no-repeat;
+  background-position:  center;
+  background-size: 100% auto;
+
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 20px 20px 10px;
+    .headbox {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      .ncitxt {
+        width: 90%;
+        padding: 10px 20px;
+        .nci {
+          font-size: 2.5vw;
+          color: #3b4db1;
+        }
+      }
+    }
+
+    .centerbox {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      .contestinfo {
+        width: 80%;
+        padding: 10px 20px;
+        .contest {
+          font-size: 1.5vw;
+          color: #3b4db1;
+        }
+      }
+    }
+
+    .footbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      .footcard {
+        width: 35%;
+        background: #f4f4f4;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px 20px;
+        margin-bottom: 4vh;
+        .cardtxt {
+          .lianatxt {
+            color: #3b4db1;
+            font-size: 1.3vw;
+            line-height: 4.5vh;
+          }
+        }
+      }
+      .txtyear {
+        .year {
+          font-size: 1.3vw;
+          color: #3b4db1;
+        }
+      }
+    }
+  }
+}
+
+.materials{
+  width: 100%;
+  height: 90vh;
+  background: #f4f4f4;
+  .container{
+    width: 100%;
+    height: 100%;
+    padding: 20px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .docBlock{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      .docCard{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 20vw;
+        min-width: 20vw;
+        max-height: 35%;
+        min-height: 35%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 2px #adadad;
+        color: #3b4db1;
+        transition: all 0.2s;
+        .icon{
+          width: 20%;
+          align-self: self-end;
+          padding: 10px;
+          
+          .uploadImg{
+            width: 100%;
+            height: auto;
+          }
+        }
+        .typeName{
+          padding-bottom: 5vh;
+          align-self: center;
+          .typeTxt{
+            font-size: 2vw;
+            color: #3b4db1;
+          }
+        }
+        .docName{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          min-height: 10vh;
+          border-end-end-radius: 10px;
+          border-end-start-radius: 10px;
+          text-align: center;
+          align-self: center;
+          background: #282828;
+          padding: 10px;
+          .docTxt{
+            font-size: 1.4vw;
+            color: #3b4db1;
+          }
+        }
+      }
+      .docCard:hover{
+        scale: 1.2;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 500px) {
+  header .logo {
+    width: 50px;
+  }
+  header .menu {
+    display: none;
+  }
+  header .navButton{
+    display: flex;
+  }
+  header .menu .navig p {
+    font-size: 4vw;
+  }
+  .main .container .headbox .ncitxt .nci {
+    font-size: 3.75vw;
+  }
+  .main .container .centerbox .contestinfo .contest {
+    font-size: 2.25vw;
+  }
+  .main .container .footbox .footcard .cardtxt .lianatxt {
+    font-size: 1.95vw;
+  }
+  .main .container .footbox .txtyear .year {
+    font-size: 1.95vw;
+  }
+  .materials .container .docBlock .docCard .typeName .typeTxt {
+    font-size: 3vw;
+  }
+  .materials .container .docBlock .docCard .docName .docTxt {
+    font-size: 1.8vw;
+  }
+  .materials .container .docBlock .docCard {
+    min-height: auto;
+  }
+}
